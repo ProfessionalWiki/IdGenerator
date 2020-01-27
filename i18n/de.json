@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"Karsten Hoffmeyer"
+		]
+	},
+	"id-generator-desc": "Stellt eine Parserfunktion bereit, die das Generieren aufsteigender numerischer Kennungen ermöglicht"
+}

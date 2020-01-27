@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Jeroen De Dauw",
+			"Karsten Hoffmeyer"
+		]
+	},
+	"id-generator-name": "ID Generator",
+	"id-generator-desc": "Provides a parser function to generate unique incremental numeric IDs"
+}
