@@ -16,8 +16,6 @@ class NumericIdSetup {
 					function ( Parser $parser, string $param = '' ) {
 						return [
 							'hi there' . $param, // TODO
-							'noparse' => true,
-							'isHTML' => false,
 						];
 					}
 				);

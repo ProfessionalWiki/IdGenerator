@@ -19,7 +19,7 @@
 	"type": "parserhook",
 
 	"requires": {
-		"MediaWiki": ">= 1.27.0"
+		"MediaWiki": ">= 1.31.0"
 	},
 
 	"config": {

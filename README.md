@@ -11,7 +11,7 @@
 ## Platform requirements
 
 * PHP 7.1 or later
-* MediaWiki 1.27 or later (and likely also older versions)
+* MediaWiki 1.31 or later (and likely also older versions)
 
 ## Installation
 
