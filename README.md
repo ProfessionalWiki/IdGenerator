@@ -6,11 +6,11 @@
 [![Latest Stable Version](https://poser.pugx.org/professional-wiki/id-generator/version.png)](https://packagist.org/packages/professional-wiki/id-generator)
 [![Download count](https://poser.pugx.org/professional-wiki/id-generator/d/total.png)](https://packagist.org/packages/professional-wiki/id-generator)
 
-The **ID Generator** extension provides a minimalistic sequential numeric ID generation function.
+The **ID Generator** extension provides a minimalistic sequential numeric ID generation function. It was created by [Professional.Wiki](https://professional.wiki/).
 
 The wikitext `{{#next_number:}}` outputs `1` the first time it is used, then `2`, etc. 
 
-Installable and usable without running the "update.php" maintenance script. Created as alternative to the IDProvider extension, since IDProvider cannot be installed via Composer and has horrible code quality.
+Installable and usable without running the "update.php" maintenance script. Created as alternative to the IDProvider extension, since it cannot be installed via Composer and moreover requires an extra database table.
 
 ## Usage
 
