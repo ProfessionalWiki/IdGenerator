@@ -2,15 +2,15 @@
 
 declare( strict_types = 1 );
 
-namespace NumericId;
+namespace IdGenerator;
 
 use Parser;
 
-class NumericIdSetup {
+class IdGeneratorSetup {
 
 	public static function onExtensionFunction() {
 		$GLOBALS['wgHooks']['ParserFirstCallInit'][] = function ( Parser &$parser ) {
-			foreach ( [ 'numeric_id', 'numericid' ] as $functionName ) {
+			foreach ( [ 'generate_id', 'generateid' ] as $functionName ) {
 				$parser->setFunctionHook(
 					$functionName,
 					function ( Parser $parser, string $param = '' ) {

@@ -2,7 +2,7 @@
 
 declare( strict_types = 1 );
 
-namespace NumericId;
+namespace IdGenerator;
 
 use RuntimeException;
 
@@ -14,4 +14,3 @@ interface IdGenerator {
 	public function getNewId( string $type = '' ): int;
 
 }
-

@@ -1,12 +1,12 @@
 {
-	"name": "professional-wiki/numeric-id",
+	"name": "professional-wiki/id-generator",
 	"type": "mediawiki-extension",
 	"description": "",
 	"keywords": [
 		"MediaWiki",
 		"wiki"
 	],
-	"homepage": "https://github.com/ProfessionalWiki/NumericId",
+	"homepage": "https://github.com/ProfessionalWiki/IdGenerator",
 	"license": "BSD-3-Clause",
 	"authors": [
 		{
@@ -23,7 +23,7 @@
 		}
 	],
 	"support": {
-		"source": "https://github.com/ProfessionalWiki/NumericId"
+		"source": "https://github.com/ProfessionalWiki/IdGenerator"
 	},
 	"require": {
 		"php": ">=7.1",
@@ -31,8 +31,8 @@
 	},
 	"autoload": {
 		"psr-4": {
-			"NumericId\\": "src/",
-			"NumericId\\Tests\\": "tests/"
+			"IdGenerator\\": "src/",
+			"IdGenerator\\Tests\\": "tests/"
 		}
 	}
 }

@@ -2,9 +2,9 @@
 
 declare( strict_types = 1 );
 
-namespace NumericId\PackagePrivate;
+namespace IdGenerator\PackagePrivate;
 
-use NumericId\IdGenerator;
+use IdGenerator\IdGenerator;
 use RuntimeException;
 use Wikimedia\Rdbms\IDatabase;
 use Wikimedia\Rdbms\ILoadBalancer;

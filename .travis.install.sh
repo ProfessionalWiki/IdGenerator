@@ -18,13 +18,13 @@ mysql -e 'create database its_a_mw;'
 php maintenance/install.php --dbtype $DBTYPE --dbuser root --dbname its_a_mw --dbpath $(pwd) --pass nyan TravisWiki admin --scriptpath /TravisWiki
 
 cd extensions
-cp -r $originalDirectory NumericId
-cd NumericId
+cp -r $originalDirectory IdGenerator
+cd IdGenerator
 composer install --prefer-source
 cd ..
 cd ..
 
-echo 'wfLoadExtension( "NumericId" );' >> LocalSettings.php
+echo 'wfLoadExtension( "IdGenerator" );' >> LocalSettings.php
 
 echo 'error_reporting(E_ALL| E_STRICT);' >> LocalSettings.php
 echo 'ini_set("display_errors", 1);' >> LocalSettings.php

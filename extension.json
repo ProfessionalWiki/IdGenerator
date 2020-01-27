@@ -1,5 +1,5 @@
 {
-	"name": "NumericId",
+	"name": "IdGenerator",
 
 	"version": "1.0.0",
 
@@ -8,11 +8,11 @@
 		"[https://www.entropywins.wtf/mediawiki Jeroen De Dauw]"
 	],
 
-	"url": "https://github.com/ProfessionalWiki/NumericId#numeric-id",
+	"url": "https://github.com/ProfessionalWiki/IdGenerator#id-generator",
 
-	"namemsg": "numeric-id-name",
+	"namemsg": "id-generator-name",
 
-	"descriptionmsg": "numeric-id-desc",
+	"descriptionmsg": "id-generator-desc",
 
 	"license-name": "BSD-3-Clause",
 
@@ -26,20 +26,20 @@
 	},
 
 	"MessagesDirs": {
-		"NumericId": [
+		"IdGenerator": [
 			"i18n"
 		]
 	},
 	"ExtensionMessagesFiles": {
-		"NumericIdMagic": "i18n/magic/MagicWords.php"
+		"IdGeneratorMagic": "i18n/magic/MagicWords.php"
 	},
 
 	"AutoloadClasses": {
-		"NumericId\\NumericIdSetup": "src/NumericIdSetup.php"
+		"IdGenerator\\IdGeneratorSetup": "src/IdGeneratorSetup.php"
 	},
 
 	"ExtensionFunctions": [
-		"NumericId\\NumericIdSetup::onExtensionFunction"
+		"IdGenerator\\IdGeneratorSetup::onExtensionFunction"
 	],
 
 	"load_composer_autoloader": true,

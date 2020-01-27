@@ -1,10 +1,10 @@
-# Numeric Id
+# ID Generator
 
-[![Build Status](https://travis-ci.org/ProfessionalWiki/NumericId.svg?branch=master)](https://travis-ci.org/ProfessionalWiki/NumericId)
-[![Code Coverage](https://scrutinizer-ci.com/g/ProfessionalWiki/NumericId/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/ProfessionalWiki/NumericId/?branch=master)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/ProfessionalWiki/NumericId/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/ProfessionalWiki/NumericId/?branch=master)
-[![Latest Stable Version](https://poser.pugx.org/professional-wiki/numeric-id/version.png)](https://packagist.org/packages/professional-wiki/numeric-id)
-[![Download count](https://poser.pugx.org/professional-wiki/numeric-id/d/total.png)](https://packagist.org/packages/professional-wiki/numeric-id)
+[![Build Status](https://travis-ci.org/ProfessionalWiki/IdGenerator.svg?branch=master)](https://travis-ci.org/ProfessionalWiki/IdGenerator)
+[![Code Coverage](https://scrutinizer-ci.com/g/ProfessionalWiki/IdGenerator/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/ProfessionalWiki/IdGenerator/?branch=master)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/ProfessionalWiki/IdGenerator/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/ProfessionalWiki/IdGenerator/?branch=master)
+[![Latest Stable Version](https://poser.pugx.org/professional-wiki/id-generator/version.png)](https://packagist.org/packages/professional-wiki/id-generator)
+[![Download count](https://poser.pugx.org/professional-wiki/id-generator/d/total.png)](https://packagist.org/packages/professional-wiki/id-generator)
 
 
 
@@ -26,7 +26,7 @@ create one and add the following content to it:
 ```
 {
 	"require": {
-		"professional-wiki/numeric-id": "~1.0"
+		"professional-wiki/id-generator": "~1.0"
 	}
 }
 ```
@@ -34,7 +34,7 @@ create one and add the following content to it:
 If you already have a "composer.local.json" file add the following line to the end of the "require"
 section in your file:
 
-    "professional-wiki/numeric-id": "~1.0"
+    "professional-wiki/id-generator": "~1.0"
 
 Remember to add a comma to the end of the preceding line in this section.
 
@@ -50,7 +50,7 @@ Note if you have Git installed on your system add the `--prefer-source` flag to 
 
 Add the following line to the end of your "LocalSettings.php" file:
 
-    wfLoadExtension( 'NumericId' );
+    wfLoadExtension( 'IdGenerator' );
 
 ## Usage
 
@@ -60,8 +60,8 @@ Add the following line to the end of your "LocalSettings.php" file:
 If you want to contribute work to the project please subscribe to the developers mailing list and
 have a look at the contribution guideline.
 
-* [File an issue](https://github.com/ProfessionalWiki/NumericId/issues)
-* [Submit a pull request](https://github.com/ProfessionalWiki/NumericId/pulls)
+* [File an issue](https://github.com/ProfessionalWiki/IdGenerator/issues)
+* [Submit a pull request](https://github.com/ProfessionalWiki/IdGenerator/pulls)
 * [Professional MediaWiki support](https://professional.wiki/en/support) is available via [Professional Wiki](https://professional.wiki/).
 
 ## Release notes
