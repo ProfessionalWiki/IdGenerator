@@ -1,0 +1,48 @@
+{
+	"name": "NumericId",
+
+	"version": "1.0.0",
+
+	"author": [
+		"[https://professional.wiki/ Professional.Wiki]",
+		"[https://www.entropywins.wtf/mediawiki Jeroen De Dauw]"
+	],
+
+	"url": "https://github.com/ProfessionalWiki/NumericId#numeric-id",
+
+	"namemsg": "numeric-id-name",
+
+	"descriptionmsg": "numeric-id-desc",
+
+	"license-name": "BSD-3-Clause",
+
+	"type": "parserhook",
+
+	"requires": {
+		"MediaWiki": ">= 1.27.0"
+	},
+
+	"config": {
+	},
+
+	"MessagesDirs": {
+		"NumericId": [
+			"i18n"
+		]
+	},
+	"ExtensionMessagesFiles": {
+		"NumericIdMagic": "i18n/magic/MagicWords.php"
+	},
+
+	"AutoloadClasses": {
+		"NumericId\\NumericIdSetup": "src/NumericIdSetup.php"
+	},
+
+	"ExtensionFunctions": [
+		"NumericId\\NumericIdSetup::onExtensionFunction"
+	],
+
+	"load_composer_autoloader": true,
+
+	"manifest_version": 2
+}

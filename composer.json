@@ -1,0 +1,38 @@
+{
+	"name": "professional-wiki/numeric-id",
+	"type": "mediawiki-extension",
+	"description": "",
+	"keywords": [
+		"MediaWiki",
+		"wiki"
+	],
+	"homepage": "https://github.com/ProfessionalWiki/NumericId",
+	"license": "BSD-3-Clause",
+	"authors": [
+		{
+			"name": "Professional.Wiki",
+			"email": "info@professional.wiki",
+			"homepage": "https://professional.wiki",
+			"role": "Creator"
+		},
+		{
+			"name": "Jeroen De Dauw",
+			"email": "jeroendedauw@gmail.com",
+			"homepage": "https://www.entropywins.wtf",
+			"role": "Creator and lead developer"
+		}
+	],
+	"support": {
+		"source": "https://github.com/ProfessionalWiki/NumericId"
+	},
+	"require": {
+		"php": ">=7.1",
+		"composer/installers": "^1.0.1"
+	},
+	"autoload": {
+		"psr-4": {
+			"NumericId\\": "src/",
+			"NumericId\\Tests\\": "tests/"
+		}
+	}
+}
