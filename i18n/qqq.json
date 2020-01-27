@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Karsten Hoffmeyer"
+		]
+	},
+	"id-generator-name": "{{Name}}",
+	"id-generator-desc": "{{Desc|name=ID Generator|url=https://github.com/ProfessionalWiki/IdGenerator}}"
+}
