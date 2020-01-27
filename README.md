@@ -6,15 +6,15 @@
 [![Latest Stable Version](https://poser.pugx.org/professional-wiki/id-generator/version.png)](https://packagist.org/packages/professional-wiki/id-generator)
 [![Download count](https://poser.pugx.org/professional-wiki/id-generator/d/total.png)](https://packagist.org/packages/professional-wiki/id-generator)
 
-Provides a minimalistic sequential numeric id generation function.
+The **ID Generator** extension provides a minimalistic sequential numeric ID generation function.
 
 The wikitext `{{#next_number:}}` outputs `1` the first time it is used, then `2`, etc. 
 
-Installable and usable without running `update.php`.
+Installable and usable without running the "update.php" maintenance script.
 
 ## Usage
 
-To get a new numeric id:
+To get a new numeric ID:
 
     {{#next_number:}}
 
@@ -23,7 +23,7 @@ you can use [MediaWiki's `subst` function](https://www.mediawiki.org/wiki/Help:S
 
     {{subst:#next_number:}}
 
-You can have multiple id sequences by providing an id type. This type can be any string up to 60 characters.
+You can have multiple id sequences by providing an ID type. This type can be any string up to 60 characters.
 
     {{#next_number:project}}
 
@@ -80,10 +80,15 @@ have a look at the contribution guideline.
 * [Submit a pull request](https://github.com/ProfessionalWiki/IdGenerator/pulls)
 * [Professional MediaWiki support](https://professional.wiki/en/support) is available via [Professional Wiki](https://professional.wiki/).
 
+
+## License
+
+[BSD 3-Clause "New" or "Revised" License (BSD-3-Clause)](/COPYING).
+
 ## Release notes
 
 ### Version 1.0.0
 
 Released on January 27th, 2020.
 
-Initial release with
+Initial release
