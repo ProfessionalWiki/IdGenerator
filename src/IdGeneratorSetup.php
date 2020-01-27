@@ -4,18 +4,31 @@ declare( strict_types = 1 );
 
 namespace IdGenerator;
 
+use MediaWiki\MediaWikiServices;
 use Parser;
 
 class IdGeneratorSetup {
 
+	/**
+	 * @var IdGeneratorFactory
+	 */
+	private static $factory;
+
 	public static function onExtensionFunction() {
+		self::$factory = new IdGeneratorFactory();
+
 		$GLOBALS['wgHooks']['ParserFirstCallInit'][] = function ( Parser &$parser ) {
 			foreach ( [ 'generate_id', 'generateid' ] as $functionName ) {
 				$parser->setFunctionHook(
 					$functionName,
 					function ( Parser $parser, string $param = '' ) {
+						$generator = self::$factory->getIdGenerator(
+							MediaWikiServices::getInstance()->getDBLoadBalancer()
+						);
+
 						return [
-							'hi there' . $param, // TODO
+							$generator->getNewId( $param ),
+							'noparse' => true
 						];
 					}
 				);

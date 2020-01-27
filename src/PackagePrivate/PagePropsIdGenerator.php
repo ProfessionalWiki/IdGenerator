@@ -9,41 +9,21 @@ use RuntimeException;
 use Wikimedia\Rdbms\IDatabase;
 use Wikimedia\Rdbms\ILoadBalancer;
 
-class SqlIdGenerator implements IdGenerator {
+class PagePropsIdGenerator implements IdGenerator {
 
-	/**
-	 * @var ILoadBalancer
-	 */
+	private const FAKE_PAGE_ID = -42;
+
 	private $loadBalancer;
 
-	/**
-	 * @var int[][]
-	 */
-	private $idBlacklist;
-
-	/**
-	 * @var bool whether use a separate master database connection to generate new id or not.
-	 */
-	private $separateDbConnection;
-
-	/**
-	 * @param ILoadBalancer $loadBalancer
-	 * @param int[][] $idBlacklist
-	 */
-	public function __construct(
-		ILoadBalancer $loadBalancer,
-		array $idBlacklist = [],
-		$separateDbConnection = false
-	) {
+	public function __construct( ILoadBalancer $loadBalancer ) {
 		$this->loadBalancer = $loadBalancer;
-		$this->idBlacklist = $idBlacklist;
-		$this->separateDbConnection = $separateDbConnection;
 	}
 
 	public function getNewId( string $type = '' ): int {
-		$flags = ( $this->separateDbConnection === true ) ? ILoadBalancer::CONN_TRX_AUTOCOMMIT : 0;
-		$database = $this->loadBalancer->getConnection( DB_MASTER, [], false, $flags );
+		$database = $this->loadBalancer->getConnection( DB_MASTER );
+
 		$id = $this->generateNewId( $database, $type );
+
 		$this->loadBalancer->reuseConnection( $database );
 
 		return $id;
@@ -59,33 +39,30 @@ class SqlIdGenerator implements IdGenerator {
 	 * @throws RuntimeException
 	 * @return int
 	 */
-	private function generateNewId( IDatabase $database, $type, $retry = true ) {
+	private function generateNewId( IDatabase $database, string $type, $retry = true ): int {
 		$database->startAtomic( __METHOD__ );
 
 		$currentId = $database->selectRow(
-			'wb_id_counters',
-			'id_value',
-			[ 'id_type' => $type ],
+			'page_props',
+			'pp_value',
+			$this->getWhere( $type ),
 			__METHOD__,
 			[ 'FOR UPDATE' ]
 		);
 
 		if ( is_object( $currentId ) ) {
-			$id = $currentId->id_value + 1;
+			$id = (int)$currentId->pp_value + 1;
 			$success = $database->update(
-				'wb_id_counters',
-				[ 'id_value' => $id ],
-				[ 'id_type' => $type ]
+				'page_props',
+				[ 'pp_value' => $id ],
+				$this->getWhere( $type )
 			);
 		} else {
 			$id = 1;
 
 			$success = $database->insert(
-				'wb_id_counters',
-				[
-					'id_value' => $id,
-					'id_type' => $type,
-				]
+				'page_props',
+				$this->getInsertValues( $type, $id )
 			);
 
 			// Retry once, since a race condition on initial insert can cause one to fail.
@@ -103,11 +80,24 @@ class SqlIdGenerator implements IdGenerator {
 			throw new RuntimeException( 'Could not generate a reliably unique ID.' );
 		}
 
-		if ( array_key_exists( $type, $this->idBlacklist ) && in_array( $id, $this->idBlacklist[$type] ) ) {
-			$id = $this->generateNewId( $database, $type );
-		}
-
 		return $id;
+	}
+
+	private function getInsertValues( string $idType, int $id ): array {
+		$values = $this->getWhere( $idType );
+		$values['pp_value'] = $id;
+		return $values;
+	}
+
+	private function getWhere( string $idType ): array {
+		return [
+			'pp_page' => self::FAKE_PAGE_ID,
+			'pp_propname' => $this->makePropertyName( $idType )
+		];
+	}
+
+	private function makePropertyName( string $idType ): string {
+		return 'id_' . $idType;
 	}
 
 }

@@ -8,14 +8,18 @@ class SmokeTest extends TestCase {
 
 	private function parse( string $textToParse ): string {
 		$parser = new \Parser();
+		$options = new \ParserOptions();
+		$options->setOption( 'wrapclass', false );
 
-		return $parser->parse( $textToParse, \Title::newMainPage(), new \ParserOptions() )->getText();
+		return $parser->parse( $textToParse, \Title::newMainPage(), $options )->getText();
 	}
 
 	public function testSmoke() {
+		$idType = (string)rand() . (string)rand();
+
 		$this->assertContains(
-			'hi theresuch',
-			$this->parse( '{{#generate_id:such}}' )
+			"<p>1\n",
+			$this->parse( "{{#generate_id:$idType}}" )
 		);
 	}
 
