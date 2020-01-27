@@ -18,7 +18,7 @@ class IdGeneratorSetup {
 		self::$factory = new IdGeneratorFactory();
 
 		$GLOBALS['wgHooks']['ParserFirstCallInit'][] = function ( Parser &$parser ) {
-			foreach ( [ 'generate_id', 'generateid' ] as $functionName ) {
+			foreach ( [ 'next_id', 'nextid' ] as $functionName ) {
 				$parser->setFunctionHook(
 					$functionName,
 					function ( Parser $parser, string $param = '' ) {

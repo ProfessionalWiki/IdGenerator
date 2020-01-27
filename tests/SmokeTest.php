@@ -24,7 +24,7 @@ class SmokeTest extends TestCase {
 
 		$this->assertContains(
 			"<p>1\n",
-			$this->parse( "{{#generate_id:$idType}}" )
+			$this->parse( "{{#next_id:$idType}}" )
 		);
 	}
 
