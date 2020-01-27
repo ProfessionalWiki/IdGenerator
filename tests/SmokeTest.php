@@ -1,9 +1,14 @@
 <?php
 
+declare( strict_types = 1 );
+
 namespace IdGenerator\Tests;
 
 use PHPUnit\Framework\TestCase;
 
+/**
+ * @ingroup Database
+ */
 class SmokeTest extends TestCase {
 
 	private function parse( string $textToParse ): string {
