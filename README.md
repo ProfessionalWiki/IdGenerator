@@ -6,7 +6,26 @@
 [![Latest Stable Version](https://poser.pugx.org/professional-wiki/id-generator/version.png)](https://packagist.org/packages/professional-wiki/id-generator)
 [![Download count](https://poser.pugx.org/professional-wiki/id-generator/d/total.png)](https://packagist.org/packages/professional-wiki/id-generator)
 
+Provides a minimalistic sequential numeric id generation function.
 
+The wikitext `{{#next_number:}}` outputs `1` the first time it is used, then `2`, etc. 
+
+Installable and usable without running `update.php`.
+
+## Usage
+
+To get a new numeric id:
+
+    {{#next_number:}}
+
+The above function will output a new number on every reparse of the page. If you want a number to be generated once,
+you can use [MediaWiki's `subst` function](https://www.mediawiki.org/wiki/Help:Substitution) as follows:
+
+    {{subst:#next_number:}}
+
+You can have multiple id sequences by providing an id type. This type can be any string up to 60 characters.
+
+    {{#next_number:project}}
 
 ## Platform requirements
 
@@ -15,7 +34,7 @@
 
 ## Installation
 
-The recommended way to install Numeric Id is using [Composer](https://getcomposer.org) with
+The recommended way to install ID Generator is using [Composer](https://getcomposer.org) with
 [MediaWiki's built-in support for Composer](https://professional.wiki/en/articles/installing-mediawiki-extensions-with-composer).
 
 ### Step 1
@@ -52,9 +71,6 @@ Add the following line to the end of your "LocalSettings.php" file:
 
     wfLoadExtension( 'IdGenerator' );
 
-## Usage
-
-
 ## Contribution and support
 
 If you want to contribute work to the project please subscribe to the developers mailing list and
@@ -66,9 +82,8 @@ have a look at the contribution guideline.
 
 ## Release notes
 
-
 ### Version 1.0.0
 
-Released on August 16, 2019.
+Released on January 27th, 2020.
 
 Initial release with

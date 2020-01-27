@@ -4,6 +4,6 @@ $magicWords = [];
 
 /** English (English) */
 $magicWords['en'] = [
-	'next_id' => [ 0, 'next_id' ],
-	'nextid' => [ 0, 'nextid' ],
+	'next_number' => [ 0, 'next_number' ],
+	'nextnumber' => [ 0, 'nextnumber' ],
 ];
