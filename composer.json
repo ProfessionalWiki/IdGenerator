@@ -1,10 +1,17 @@
 {
 	"name": "professional-wiki/id-generator",
 	"type": "mediawiki-extension",
-	"description": "",
+	"description": "Provides a parser function to generate unique incremental numeric IDs",
 	"keywords": [
 		"MediaWiki",
-		"wiki"
+		"wiki",
+		"id",
+		"id generator",
+		"idgenerator",
+		"next_number",
+		"nextnumber",
+		"next number",
+		"parser function"
 	],
 	"homepage": "https://github.com/ProfessionalWiki/IdGenerator",
 	"license": "BSD-3-Clause",
