@@ -13,6 +13,7 @@ use PHPUnit\Framework\TestCase;
 /**
  * @ingroup Database
  * @covers \IdGenerator\PackagePrivate\DatabaseIdGenerator
+ * @covers \IdGenerator\PackagePrivate\PagePropsIdDatabase
  */
 class PagePropsIdGeneratorTest extends TestCase {
 
