@@ -27,6 +27,18 @@ You can have multiple id sequences by providing an ID type. This type can be any
 
     {{#next_number:project}}
 
+**Number increment details**
+
+* IDs are incremented globally, not per page.
+* Increments happen on every parse.
+* MediaWiki might parse the parser function more than once per save, so the function output might go from 1 to 3.
+* You are guaranteed to get a higher ID on every generation. Usage is not tracked, so there is no reuse.
+
+**Example**
+
+A page with `{{#next_number:}} {{#next_number:}}` will output `1 2`, assuming the extension was just installed.
+If the ID counter was already at 100, you'd get `101 102`. If you then refresh this page you'd get `103 104`.
+
 ## Platform requirements
 
 * PHP 7.1 or later
