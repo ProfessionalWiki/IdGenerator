@@ -4,18 +4,20 @@ declare( strict_types = 1 );
 
 namespace IdGenerator\Tests;
 
-use IdGenerator\PackagePrivate\PagePropsIdGenerator;
+use IdGenerator\IdGenerator;
+use IdGenerator\PackagePrivate\DatabaseIdGenerator;
+use IdGenerator\PackagePrivate\PagePropsIdDatabase;
 use MediaWiki\MediaWikiServices;
 use PHPUnit\Framework\TestCase;
 
 /**
  * @ingroup Database
- * @covers \IdGenerator\PackagePrivate\PagePropsIdGenerator
+ * @covers \IdGenerator\PackagePrivate\DatabaseIdGenerator
  */
 class PagePropsIdGeneratorTest extends TestCase {
 
 	public function testIncrementsIdByOne() {
-		$generator = new PagePropsIdGenerator( MediaWikiServices::getInstance()->getDBLoadBalancer() );
+		$generator = $this->newGenerator();
 
 		$this->assertSame(
 			$generator->getNewId() + 1,
@@ -24,11 +26,18 @@ class PagePropsIdGeneratorTest extends TestCase {
 	}
 
 	public function testIncrementsNamedId() {
-		$generator = new PagePropsIdGenerator( MediaWikiServices::getInstance()->getDBLoadBalancer() );
+		$generator = $this->newGenerator();
 
 		$this->assertSame(
 			$generator->getNewId( 'TestName' ) + 1,
 			$generator->getNewId( 'TestName' )
+		);
+	}
+
+	private function newGenerator(): IdGenerator {
+		return new DatabaseIdGenerator(
+			MediaWikiServices::getInstance()->getDBLoadBalancer(),
+			new PagePropsIdDatabase()
 		);
 	}
 
