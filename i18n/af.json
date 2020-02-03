@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"Joris Darlington Quarshie"
+		]
+	},
+	"id-generator-desc": "Bied 'n parserfunksie om unieke inkrementele numeriese ID's te genereer"
+}
