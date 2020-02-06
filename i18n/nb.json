@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"Jon Harald Søby"
+		]
+	},
+	"id-generator-desc": "Gir en parserfunksjon for å generere unike, økende numeriske ID-er"
+}
