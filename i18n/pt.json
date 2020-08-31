@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"Hamilton Abreu"
+		]
+	},
+	"id-generator-desc": "Fornece uma função do analisador sintático para gerar identificadores numéricos incrementais únicos"
+}
