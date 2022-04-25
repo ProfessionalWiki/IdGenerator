@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"StarrySky"
+		]
+	},
+	"id-generator-desc": "提供解析器函数以生成唯一的增量数字 ID"
+}
