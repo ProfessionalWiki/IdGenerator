@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"McDutchie"
+		]
+	},
+	"id-generator-desc": "Forni un function al analysator syntactic pro generar identificatores numeric incremental unic"
+}
