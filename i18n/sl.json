@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"Eleassar"
+		]
+	},
+	"id-generator-desc": "Zagotavlja funkcijo razčlenjevalnika za ustvarjanje enoličnih inkrementalnih številskih ID-jev"
+}
