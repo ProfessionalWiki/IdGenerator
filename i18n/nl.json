@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"McDutchie"
+		]
+	},
+	"id-generator-desc": "Biedt een parserfunctie om unieke incrementele numerieke ID’s te genereren"
+}
