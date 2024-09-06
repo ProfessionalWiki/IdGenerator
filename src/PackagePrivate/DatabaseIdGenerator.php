@@ -18,7 +18,7 @@ class DatabaseIdGenerator implements IdGenerator {
 	}
 
 	public function getNewId( string $type = '' ): int {
-		$database = $this->loadBalancer->getConnection( DB_MASTER );
+		$database = $this->loadBalancer->getConnection( DB_PRIMARY );
 
 		$database->startAtomic( __METHOD__ );
 
