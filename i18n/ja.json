@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"Yukkuri Shambis"
+		]
+	},
+	"id-generator-desc": "固有の増加していく数値IDを生成するパーサー関数を提供します"
+}
