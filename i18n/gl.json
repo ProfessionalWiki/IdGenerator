@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"Toliño"
+		]
+	},
+	"id-generator-desc": "Ofrece unha función analizadora para xerar identificadores numéricos únicos e incrementais"
+}
