@@ -3,14 +3,16 @@
 [![Build Status](https://travis-ci.org/ProfessionalWiki/IdGenerator.svg?branch=master)](https://travis-ci.org/ProfessionalWiki/IdGenerator)
 [![Code Coverage](https://scrutinizer-ci.com/g/ProfessionalWiki/IdGenerator/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/ProfessionalWiki/IdGenerator/?branch=master)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/ProfessionalWiki/IdGenerator/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/ProfessionalWiki/IdGenerator/?branch=master)
-[![Latest Stable Version](https://poser.pugx.org/professional-wiki/id-generator/version.png)](https://packagist.org/packages/professional-wiki/id-generator)
-[![Download count](https://poser.pugx.org/professional-wiki/id-generator/d/total.png)](https://packagist.org/packages/professional-wiki/id-generator)
+[![Latest Stable Version](https://poser.pugx.org/professional-wiki/id-generator/v/stable)](https://packagist.org/packages/professional-wiki/id-generator)
+[![Download count](https://poser.pugx.org/professional-wiki/id-generator/downloads)](https://packagist.org/packages/professional-wiki/id-generator)
+
+modern-timeline
 
 The **ID Generator** extension provides a minimalistic sequential numeric ID generation function. It was created by [Professional.Wiki](https://professional.wiki/).
 
 The wikitext `{{#next_number:}}` outputs `1` the first time it is used, then `2`, etc. 
 
-Installable and usable without running the "update.php" maintenance script. Created as alternative to the IDProvider extension, since it cannot be installed via Composer and moreover requires an extra database table.
+Installable and usable without running the "update.php" maintenance script. Created as an alternative to the IDProvider extension since it cannot be installed via Composer and, moreover, requires an extra database table.
 
 ## Usage
 
