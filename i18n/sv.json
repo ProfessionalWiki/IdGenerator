@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"Stefan2255"
+		]
+	},
+	"id-generator-desc": "Tillhandahåller en parserfunktion för att generera unika inkrementella numeriska ID:n"
+}
