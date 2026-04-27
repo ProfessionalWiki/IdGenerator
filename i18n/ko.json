@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"Tensama0415"
+		]
+	},
+	"id-generator-desc": "증가해 나가는 고유의 숫자 ID를 생성하기 위한 파서 함수를 제공합니다"
+}
