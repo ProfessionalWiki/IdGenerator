@@ -1,8 +1,9 @@
 {
 	"@metadata": {
 		"authors": [
-			"Kly"
+			"Kly",
+			"LowensteinYang"
 		]
 	},
-	"id-generator-desc": "提供解析功能以用於產生獨一的增量數值 ID"
+	"id-generator-desc": "提供解析功能以用於產生獨一的遞增數值ID"
 }
