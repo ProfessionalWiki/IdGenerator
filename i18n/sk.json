@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"Wizzard"
+		]
+	},
+	"id-generator-desc": "Poskytuje funkciu syntaktického analyzátora na generovanie jedinečných postupne narastajúcich číselných ID"
+}
